@@ -1,0 +1,22 @@
+https://stackoverflow.com/questions/60297547/handling-empty-arrays-in-pyspark-optional-binary-element-utf8-is-not-a-group
+
+schema inferred from QP data
+|--errorCodes: array(nullable = true)
+|   |--element: string(containsNull = true)
+
+
+schema inferred from credit data
+|--errorCodes: array(nullable = true)
+|   |--element: struct(containsNull = true)
+        |--errorCodeName: string (nullable = true)
+        |--errorCodeValue: string (nullable = true
+        |--errorLevel: string (nullable = true
+        |--errorType: string (nullable = true
+        |--messageKey: string (nullable = true
+
+This happens when the errorCodes for QP or any other file .
+To solve :-
+1.Save errorCodes always as string and then in query load string as json and convert it to struct
+(to explode errorcodes where ever required, it has to be in struct not string )
+2.Try reading and writing the same data in avro or ORC and see if get same issue.But avro will have performance issue
+

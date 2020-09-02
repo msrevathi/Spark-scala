@@ -1,0 +1,88 @@
+/**
+ * https://www.youtube.com/watch?v=I_aJgAmDYPk&list=PLd3UqWTnYXOmx_J1774ukG_rvrpyWczm0&index=8
+ * 1.indexed collection of fixed number of homogeneous data elements
+ * Adv-: represent huge number of values using single  variable , so that readability of code is improved
+ * Dis-Adv-: once array is created ,no chance of increasing/decreasing the array size based on our requirement.
+ * So to use arrays , we should know size in advantage(not possible always).
+ * Array Declaration :
+ * One dimentional array
+ * int[6] x; (invalid- cannot specify the array size at the time of declaration)
+ * int[] x = new int[6] - should specify the size of array at the time of creation o an array.
+ * int[] x; (valid) also int []x; or  int x[] are valid
+ * Two dimentional array
+ * int[][] x; or int x[][]; or int [][]x; or int[] []x; or int[] x[]; or int []x[] are valid
+ * <p>
+ * what are the dimentions of below array declarations
+ * int[] a,b; -> a and b both are 1 dimentional
+ * int[] a[],b; -> a is 2 dimentional, b is 1 dimentional
+ * int[] a[],b[]; -> a->2, b->2
+ * int[] []a,b; -> a->2,b->2(because compiler reads it as  int[][] a,b ; it ignores the space btw tow array braces)
+ * int[] []a,b[]; -> a->2, b->3
+ * int[] []a,[]b; -> compile error -> if dimentions is specified before variable, that facility is applicable
+ * only for first varaible in declaration
+ * int[] []a,[]b,[]c; invalid for b and c
+ * <p>
+ * Three dimentional array
+ * int[][][] a;
+ * int [][][]a;
+ * int a[][][];
+ * int[] [][]a;
+ * int[][] []a
+ * int[] a[][]
+ * <p>
+ * 2.Array is an object in java, Hence we can create arrays using new operator
+ * As we are creating an object to the array , there is a corresponding class
+ * available for array, which is part of java language level
+ * int[] a= new int[3]; -> class is : [I
+ * int[][] b= new int[3][2]; -> class is : [[I
+ * boolean[] b= new boolean[3] ; -> class is : [z
+ * <p>
+ * 3. Array with size 0is legal -> int[] x = new int[0]
+ * 4. Allowed data types for specifying array size are byte, short char and int(long, float , double are not allowed)
+ * int[] f = new int[10l]; not allowed
+ * 5.maximum allowed size for int is 2147483647, but still this will throw runtime exception java.lang.OutOfMemoryError
+ */
+
+
+
+/**
+ * 6.
+ * multi dimentional array is created like array of array approach for creating multi dimentional arrays
+ * memory utilization is improved in this approach
+ * <p>
+ * 9. once array is created, array is initialized with default values
+ * when we try to print any reerence variable , internally toString
+ * method is called which is implemented by default to return string in following form.
+ * classname@hashcode-in-hexadecimal form
+ * <p>
+ * 11. Anonymus Arrays -name less arrays , used for single usage
+ *      we cannot create size for anonymus arrays .i.e new int[3] {10,20,30}
+ *      can create multi dimentional anonymus arrays also  new int[] ({10,20,30},{10,20,30}}
+ *
+ * 12.
+ *          Array type                 Allowed elements type
+ * 1. primitive Arrays           1. Any type which can be implicitly promoted to declared type
+ * 2.object type arrays          2. Either declared type or its child class object
+ * 3.Abstract class type Arrays  3. String child class objects
+ * 4.Interface type Arrays       4. String implementation class objects are allowed
+ */
+
+
+ Utility methods in Arrays(c)
+ ---------------------------------
+ Defines several Utility methods for Array objects
+ 1.Sorting elements of Arrays:
+   public static void sort(primitive[] p): default sorting order
+   public static void sort(Object[] p):default sorting order
+   public static void sort(Object[] p, Comparator c):default custom order
+
+ Note:
+     1.We can sort primitive arrays only based on default sorting order
+     2.We can sort Object arrays only based on default/custom sorting order
+
+ 2.Sorting elements of Arrays:
+   1.public static int binarySearch(primitive[] l, primitive target)
+   2.public static int binarySearch(Object[] l, Object target)
+   3.public static int binarySearch(Object[] l, Object target, Comparator c)
+
+ Same as collections(c) binarySearch methods

@@ -1,0 +1,76 @@
+https://www.youtube.com/watch?v=LFri78r3zUQ&list=PLd3UqWTnYXOmMaHmzE1eWuynOgvrWUO5E&index=4
+https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html
+
+ArrayList(C)
+1.Underline dataStructure is Resizable-array/ growable array
+2.Duplicates are allowed
+3.Insertion order is preserved
+4.Heterogeneous objects are allowed(except TressSet and TreeMap)
+    coz, TreeSet is ordered,and having heterogeneous objects will not let it sort
+         TreeMap is ordered based on its keys, hence heterogeneous object are not allowed
+5.Null insertion is possible
+6. Constructors
+  a.capacity
+    ArrayList l = new ArrayList()
+    -creates an empty ArrayList with default initial capacity 10
+    -once it reaches its max capacity, a new ArrayList is created based on formula
+        new capacity = (current capacity * 3/2)+1
+        1st ArrayList - 10
+        2nd ArrayList - (10 *3/2)+1 = 16
+        3rd ArrayList - (10 *3/2)+1 = 16
+        4th ArrayList - (16 *3/2)+1 = 25 .....
+
+
+  b.Create initial capacity: Constructs an empty list with the specified initial capacity
+    ArrayList l = new ArrayList(int initialCapacity) // (public ArrayList(int initialCapacity)
+
+
+  c.ArrayList l = new ArrayList(Collection c) // public ArrayList(Collection<? extends E> c)
+    Constructs a ArrayList containing the elements of the specified collection
+
+7.Every collection class implements Serializable and Cloneable interfaces
+8.ArrayList and Vector classes implements RandomAccess (any random element can be accessed with same speed)
+9.Best choice for frequent accessability
+
+NOTE
+RandomAccess(I)
+ present in java.util package and doesn't have any methods, it is a marker interface
+ required ability is provided by jvm
+
+10.
+Best for
+1.if frequent operation is retrival operation
+
+Worst for
+1.if frequent operation is insertion or deletion in the middle
+    e.g
+    ArrayList l = new ArrayList(1000)
+    if we wan to add any element in between, ArrayList will create a new insert the new element in
+    between ,but will have to shift the elements after that.
+    Hence it is not good for frequent insertion/deletion operations
+
+
+NOTE: for frequent operation is insertion or deletion in the middle LinkedList is good
+
+Diff btw ArrayList and Vector
+-----------------------------------------
+    ArrayList                           Vector
+1.methods are non-synchronised          1.methods are synchronised
+2.Multiple threads are allowed          2.Only one thread is allowed to operate at a time
+to operate ,hence not thread              Hence thread safe
+safe
+3.Relatively high performance coz       3.Relatively low performance coz threads are  needed to wait to
+threads are not needed to wait to       operate on Vector Object
+operate on ArrayList Object
+4.Non-legacy(1.2)                       4.legacy(1.0)
+
+Question: How to get synchronised of ArrayList
+By default, ArrayList is non-synchronised, but we can get synchronised version of ArrayList like below
+
+ ArrayList a = new ArrayList()
+ List l = Collections.synchronisedList(a)
+
+ Now l is a synchronisedList version of ArrayList
+
+
+

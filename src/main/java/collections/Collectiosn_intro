@@ -1,0 +1,283 @@
+/**
+ * Arrays
+ * ==========
+ * 1.Fixed in size
+ *   e.g : Student[] s = new Student[10000]; // cannot extend array size once declared
+ * 2.Only homogeneous elements are allowed
+ *   e.g :
+ *         s[0] = new Student();
+ *         s[1] = new Customer(); // we get compile time error - found Customer, required Student
+ * Note: This problem is solved in arrays using Object
+ *          Object[] a = new Object[10000];
+ *          a[0] = new Student[];
+ *          a[1] = new Customer
+ *
+ * 3.No underlining support for data structure which increases the complexity of the programming
+ *  (i.e we have write code sorting arrays or for checking if the elements is present in the array or not)
+ *
+ * HENCE We go for collections
+ *
+ * COLLECTIONS
+ * ================
+ * 1. growable in nature
+ * 2. All the above 3 problems are solved in solved
+ *      a. can hold both homgeneous and heterogeneous elements
+ *      b.implemented based in some standard data structures, hence readymade methods are available
+ *
+ * Dis-adv and adv btw collections and arrays
+ * Arrays:
+ * 1.Fixed in size
+ * 2.Only homogeneous elements are allowed
+ * 3.Memory wastage is more
+ * 4.Better performance
+ * 5.No underlining support for data structure
+ * 6.Can use both with primitives and objects (int[] x = new Int[]; and Integer[] y = new Integer[])
+ *
+ * Collections:
+ * 1.Growable in size
+ * 2.both homogeneous and heterogeneous elements are allowed
+ * 3.Memory wastage is less
+ * 4.performance is less than arrays
+ * 5.Support for data structure
+ * 6.Can use only  primitives cannot and objects
+ *
+ * COllection: to represent group of objects into a single entity
+ * COllection framework: has several classed which are sed to represnt group of objects to represent as a single entity
+ *
+ * 1. 9 Key interfaces in collections
+ *      1.Collection(I)
+ *      2.List(I)
+ *      3.Set(I)
+ *      4.SortedSet(I)
+ *      5.NavigableSet(I)
+ *      6.Queue(I)
+ *      7.Map(I)
+ *      8.SortedMap(I)
+ *      9.NavigableMap(I)
+ *
+ *
+ *1.Collection(I):
+ *============== to represent group of objects into a single entity
+ *               defines most common methods applicable for any collection object
+ *               It is the root interface of collection framework
+ *               No concrete class which implemets collection(I) directly
+ *                  Collection(I)->List(I)->ArrayList(Class)
+ *                  Collection(I)->Set(I)->LinkedHasSet(class)
+ *
+ * Collection vs Collections
+ * ================================
+ * collection -1.Interface
+ *             2.if we want to represent group of objects into a single entity
+ *
+ * collections- 1.class present in java.util package
+ *              2.Defines several several utility methods  for collection objects(like sorting, searching )
+ *
+ *2 List[I]
+ * ==========
+ * Collection[I]->List[I]->LinkedList(C)
+ *                       ->ArrayList(C)
+ *                       ->Vector(C) -> Stack
+ *
+ * 1.child interface of collection
+ * 2.To represent group of objects as single entity where duplicates are allowed and insertion is  preserved
+ *
+ * 3 Set[I]
+ * ========
+ *
+ * 1.child interface of collection
+ * 2.To represent group of objects as single entity where duplicates are not allowed and insertion is not preserved
+ *
+ * Collection[I]->Set[I]->HashSet(C)
+ *                       ->LinkedHashSet(C)
+ *
+ * SortedSet(I)
+ * ==============
+ * Collection[I]->Set[I]->SortedSet(I)
+ *
+ * 1.child interface of set
+ * 2.To represent group of objects as single entity where duplicates are not allowed
+ *   and all objected inserted in sorting order(insertion order  is not preserved)
+ *
+ * NavigableSet(I)
+ * ==============
+ * Collection[I]->Set[I]->SortedSet(I)->NavigableSet(I)->TreeSet(C)
+ * 1.child interface of SortedSet
+ * 2.Contains several methods for navigation purpose(previous and next element)
+ * 3.TreeSet(C) is implementation class of NavigableSet
+ *
+ * DIFF b/w LIST and SET
+ * ===================================================
+ * List                                         Set
+ *1.duplicates allowed                  1.duplicates allowed
+ *2.Insertion order preserved           2.Insertion order not preserved
+ *
+ * QUEUE(I)
+ * ========
+ * QUEUE(I)->PriorityQueue->BlockingQueue->PriorityBlockingQueue
+ * QUEUE(I)->PriorityQueue->BlockingQueue->LinkedBlockingQueue
+ * 1.Child interface of collection
+ * 2.To represent group of objects prior to processing, then go for Queue
+ * 3.Follows FIFO, bu can implement our own priority order
+ *      e.g before sending mail, we have to store all mail-id's in some data structure,
+ *          in which order mail-id's , in the same order , the mail has to be delievered.
+ *
+ *All above interfaces(collection, list,set, sortedSet,NavigableSet, and queue) are for representing group o indiviudual objects.
+ *To representing group o individual objects as key value pairs, go for Map
+ *
+ * MAP(I)
+ *=======
+ *MAP(I)->HashMap(C)->LinkedHashMap(C)
+ *MAP(I)->WeakHashMap
+ *MAP(I)->IdentityHashMap
+ *MAP(I)->Dictonary(A.C)->Hashtable->Properties
+ *1.Not a Child interface of collection
+ *2.To representing group of  objects as key value pairs, go for Map
+ *3.Duplicates keys not allowed, but values can have duplicate values
+ *
+ * SortedMap(I)
+ * ==============
+ * Map(I)->SortedMap(I)
+ *1.Child interface of Map(I)
+ *2.To represent group of key value pairs according to sorting order of keys then SortedMap
+ *
+ *NavigableMap(I)
+ * ==============
+ * Map(I)->NavigableMap(I)->TreeMap(C)
+ *1.Child interface of Map(I)
+ *2.Contains several methods for navigation purpose(previous and next element)
+ *
+ * ==================================================================================
+ *Collection[I]->List[I]->LinkedList(C)
+ *                       ->ArrayList(C)
+ *                       ->Vector(C) -> Stack
+ *
+ *Collection[I]->Set[I]->HashSet(C)->LinkedHashSet(C)
+ *Collection[I]->Set[I]->SortedSet(I)
+ *Collection[I]->Set[I]->SortedSet(I)->NavigableSet(I)->TreeSet(C)
+ *Collection[I]->QUEUE(I)->PriorityQueue->
+ *Collection[I]->QUEUE(I)->BlockingQueue->PriorityBlockingQueue
+ *Collection[I]->QUEUE(I)->BlockingQueue->LinkedBlockingQueue
+ *
+ * Map(I)->SortedMap(I)->NavigableMap(I)->TreeMap(C)
+ * MAP(I)->Dictonary(A.C)->Hashtable->Properties
+ *
+ * Sorting
+ * =======
+ *1.default sorting- comparable(I)
+ *2.customised sorting- comparator(I)
+ *
+ *Cursors(To get objects one by one)
+ *================================
+ *1.Enumeration(I)
+ *2.Iterator(I)
+ *3.ListIterator(I)
+ *
+ * Utility classes in collections
+ *==================================
+ * Arrays
+ * Collections
+ *
+ *Legacy
+ *=============
+ *Enumeration(I),Dictonary(AC), vector(C),Hashtable(C),and Properties(C)
+ *
+ *
+ * Common methods in Collection[I]
+ *-----------------------------------------
+ * 1.add(Object o)
+ * 2.addAll(Collection c)
+ * 3.remove(Object c)
+ * 4.removeAll(Collection c)
+ * 5.clear
+ * 6.retainAll(Collection c)
+ * 7.contains(Object o)
+ * 8.containsAll(Collection c)
+ * 9.isEmpty
+ * 10.size
+ * 11. Object[] toArray (once all our operations are done on collection, convert to arrays for better performance)-
+ * 12.Iterator[]iterator(to iterate over the collection of objects one by one)
+ *
+ * Note: No concrete class which implements collection[I] directly.
+ */
+
+Utility methods in collections(c)
+--------------------------------------
+Utility methods for collection objects e.g sorting ,searching, reversing etc
+1.Sorting:
+---------
+sort(List l):default sorting asc
+     1.object should be homogeneous abd comparable otherwise RuntimeException -> ClassCastException
+     2.List should not contain null otherwise RuntimeException -> NullPointerException
+
+sort(List l, Comparable c): For customised sorting
+
+2.Searching:
+--------------
+Collections class defines binary search methods
+1.public static int binarySearch(List l, Object target): If the list is sorted in default sorting order
+2.public static int binarySearch(List l, Object target, Comparator c): If the list is sorted in custom sorting order
+
+NOTE: Above search methods internally uses binarySearch algorithm
+   successful search returns index
+   Unsuccessful search returns insertion point(location where the target element could be placed in sorted list)
+   Before calling binarySearch() list should be sorted, otherwise we get unpredictable results
+   if the list is sorted according to  Comparator, the at the time of search operation also pass the same Comparator object, otherwise we get unpredictable results.
+
+For the list of n elements ,in binarySearch()
+ successful search result range : 0 to n-1
+ unsuccessful search result range : -(n+1) to -1
+ Total result range : -(n+1) to (n-1)
+
+e.g
+     -1  -2  -3  -4
+     A   K   Z
+     0   1   2
+ successful search result: 0 to 2
+ unsuccessful search result: -1 to -4
+  Total result: -4 to 2
+
+3.reversing
+------------------
+Collections class defines below revers methods to reverse elements of lists
+
+
+
+Utility methods in Arrays(c)
+---------------------------------
+Defines several Utility methods for Array objects
+1.Sorting elements of Arrays:
+  public static void sort(primitive[] p): default sorting order
+  public static void sort(Object[] p):default sorting order
+  public static void sort(Object[] p, Comparator c):default custom order
+
+Note:
+    1.We can sort primitive arrays only based on default sorting order
+    2.We can sort Object arrays only based on default/custom sorting order
+
+2.Sorting elements of Arrays:
+  1.public static int binarySearch(primitive[] l, primitive target)
+  2.public static int binarySearch(Object[] l, Object target)
+  3.public static int binarySearch(Object[] l, Object target, Comparator c)
+
+Same as collections(c) binarySearch methods
+
+
+Conversion of Arrays to List
+-------------------------------
+Array to List:
+public static void asList(Object[] a)  : this will not create a list objects, it will give the list view for a given array
+by using array reference , if we perform any change , that is reflected to the list
+by using list reference , if we perform any change , that is reflected to the array
+by using list reference ,we cannot perform the operation whcih varies the size, otherwise RuntimeException - UnSupportedException
+  e.g
+  String[] a = {"A","B","C"};
+  List l = Arrays.asList(a);
+
+  a[0] = "K"
+  Sop(l) //[K,B,C]
+  l.add("m")//RuntimeException - UnSupportedException
+  l.remove("A")//RuntimeException - UnSupportedException
+  l.set(1,"N")//[K,N,C]
+
+By using list reference we are not allowed to replace heterogeneous objects, othewise RuntimeException ArrayStoreException
+   e.g  : set(1,Integer[22]); // ArrayStoreException

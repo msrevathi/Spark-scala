@@ -1,0 +1,85 @@
+Cursor
+1.To get objects of collection one by one
+2.3 types of Cursor
+    a.Enumeration(I)
+    b.Iterator[I]
+    c.ListIterator
+
+Enumeration
+-------------
+1.To get objects , one at a time from legacy collection object(e.g Vector, stack)
+2.Create Enumeration object like below
+  Vector  v= new Vector ();
+  Enumeration e = v.elements();
+
+3.Methods
+ a.public boolean	hasMoreElements() :   Tests if this enumeration contains more elements.
+ b.public Object nextElement() :   Returns the next element of this enumeration if
+   this enumeration object has at least one more element to provide.
+4.Limitations
+Applicable only for legacy classes (vector(1.0) and stack(1,0)), but not possible for ArrayList, LinkedList
+ and not a universal cursor
+5.Only read access but  cannot perform  remove operations
+  Hence go for Iterator
+
+Iterator(I)
+-----------------
+1.Can apply Iterator concept for any collection objects, Hence universal cursor
+2.Both read and  remove operations can be performed
+3. Can create Iterator object by using iterator() of collection(I)
+   Public Iterator iterator()
+   e.g Iterator i = c.iterator()
+    where c is any collection object
+4.Methods
+ a.boolean hasNext() : Returns true if the iteration has more elements.()
+ b.Object next() :  Returns the next element in the iteration.
+ c.void remove() :   Removes from the underlying collection the last element returned by this iterator (optional operation).
+5.Limitations
+ a.Can only move forwards, no chance for moving backwards(Enumeration also has same limitation)
+    these are single direction cursors, not bi-directional cursors
+ b.Only read/remove of objects, cannot add/replace objects
+
+Hence go for ListIterator[I]
+
+ListIterator[I]
+-------------------------------
+1.child interface of Iterator[I]
+2.bi-directional cursors
+3.can perform  read/remove , add/replace objects
+4. Can create ListIterator object by using listIterator() of collection(I)
+   Public ListIterator listIterator()
+    e.g ListIterator i = c.listIterator()
+      where c is any List object
+
+5.methods
+ forward movement
+ a.boolean hasNext() : Returns true if the iteration has more elements.()
+ b.Object next() :  Returns the next element in the iteration.
+ c.	nextIndex(): Returns the index of the element that would be returned by a subsequent call to next()
+backward movement
+ a.boolean hasPrevious() : Returns true if the iteration has Previous elements.()
+ b.Object previous() :  Returns the Previous element in the iteration.
+ c.	previousIndex(): Returns the index of the element that would be returned by a subsequent call to previous().
+
+Public void remove(): Removes from the list the last element that was returned by next() or previous() (optional operation).
+Public void add(E e):Inserts the specified element into the list (optional operation).
+Public void set(E e):Replaces the last element returned by next() or previous() with the specified element (optional operation).
+
+6.Most powerful cursor,but only applicable for list objects
+
+comparision btw Enumeration(I), Iterator[I],ListIterator[I]
+
+Enumeration                                 Iterator                                     ListIterator
+1.Only for legacy classes              1.for any collection objects                     1. Only for list objects
+2.Legacy(1.0)                          2.Not Legacy(1.2)                                2.Not Legacy(1.2)
+3.single direction(forward only)       3.single direction(forward only)                 3.bi-direction(forward and backward)
+4.only read operation                  4.read/remove operation                          4.read/remove,add/replace  operation
+5.element() of Vector class            5.iterator() of Iterator[I]                      5.listIterator() of ListIterator[I]
+6.only 2 methods()                     6.3 methods                                      6. 9 methods
+
+NOTE:
+Internal implementation of cursors: All the cursors are the interfaces, and we creating objects for cursors
+    But actually we cannot create objects for cursors,How is it working?
+    Ans: we are not creating objects for cursor Interfaces,
+        but we are getting objects for  internal implemented class  objects
+

@@ -1,0 +1,9 @@
+WeakHashMap
+------------------
+ *MAP(I)->WeakHashMap
+1.Same as HashMap except the below diff
+  -In HashMap even object doesnt have any reference, it is not eligible for GC if it is associated with HashMap
+    i.e HashMap dominates Garbage Collector
+  -In WeakHashMap if object doesnt have any reference, it is eligible for GC even though object is  associated with WeakHashMap
+      i.e  Garbage Collector dominates HashMap
+

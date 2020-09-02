@@ -1,0 +1,15 @@
+number of name nodes -2
+replication factor -3
+block size -128 mb (134217728)
+pre-prod
+55 nodes
+==========
+prod
+Nodes -50
+vcores- 1100
+total memory -10tb
+==========
+pre-prod-us
+memory -2tb
+Data Notes 30
+vcores -630

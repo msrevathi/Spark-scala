@@ -1,0 +1,22 @@
+Queue[I]
+---------------
+ * QUEUE(I)->PriorityQueue->BlockingQueue->PriorityBlockingQueue
+ * QUEUE(I)->PriorityQueue->BlockingQueue->LinkedBlockingQueue
+ * 1.Child interface of collection
+ * 2.To represent group of objects prior to processing, according to some order  then go for Queue
+ * 3.Follows FIFO, bu can implement our own priority order
+ *      e.g before sending mail, we have to store all mail-id's in some data structure,
+ *          in which order mail-id's , in the same order , the mail has to be delievered.
+ *
+
+ e.g : Before sending a sms message , we have to store all mobile numbers in some dataStructure in the order in which
+       the message to be delivered.For this FIFo requirement, queue is best choice.
+       Usually Queue follows FIFO, but for above requirement, we can implement our own  priority order also(priority Queue)
+ From 1.5 LinkedList also implements Queue which follows FIFO
+4.Methods
+ 1.boolean	offer(E e):Inserts the specified element into this queue if it is possible to do so immediately without violating capacity restrictions.
+ 2.Object 	poll():Retrieves and removes the head of this queue, or returns null if this queue is empty.
+ 3.Object 	remove():Retrieves and removes the head of this queue.if queue is empty RuntimeException:NoSuchElementException
+ 4.Object peek():Retrieves, but does not remove, the head of this queue, or returns null if this queue is empty.
+ 5.Object element(): Retrieves, but does not remove, the head of this queue.if queue is empty RuntimeException:NoSuchElementException
+

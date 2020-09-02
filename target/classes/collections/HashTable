@@ -1,0 +1,17 @@
+Hashtable
+----------------------------
+*MAP(I)->Dictonary(A.C)->Hashtable->Properties
+ 1.dataStructure is Hashtable
+ 2.Insertion order is not preserved and based on  Hash code of keys
+ 3.Duplicate key not allowed, but duplicate values are allowed
+ 4.Heterogeneous objects are allowed for both key and value
+ 5.null is not allowed : NullPointerException otherwise
+ 6.implements Serializable(I) and clonable[I], not RandomAccess[I]
+ 7.Best if frequent operation is search
+ 8.Synchronised and thread safe
+ 9.Constructors
+       a.Hashtable h = new Hashtable() : Constructs empty Hashtable with  default initial capacity (11) and load factor (0.75).
+       b.Hashtable h = new Hashtable(int initialCapacity) :Constructs empty  Hashtable with specified initial capacity and default load factor (0.75).
+       c.Hashtable h = new Hashtable(int initialCapacity, float loadFactor) :Constructs empty  Hashtable with the specified initial capacity and the specified load factor.
+       d.Hashtable h = Hashtable(Map  c):Created equivalent Hashtable if specified Map
+

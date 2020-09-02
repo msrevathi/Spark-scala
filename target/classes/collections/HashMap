@@ -1,0 +1,37 @@
+HashMap[I]
+---------------
+ *MAP(I)->HashMap(C)
+ 1.dataStructure is Hashtable
+ 2.Insertion order is not preserved and based on  Hash code of keys
+ 3.Duplicate key not allowed, but duplicate values are allowed
+ 4.Heterogeneous objects are allowed for both key and value
+ 5.null is allowed for key(only once)
+ 6.null is allowed for value(multiple times)
+ 7.implements Serializable(I) and clonable[I], not RandomAccess[I]
+ 8.Best if frequent operation is search
+ 9.Constructors
+     a.HashMap h = new HashMap() : Constructs empty HashMap with  default initial capacity (16) and load factor (0.75).
+     b.HashMap h = new HashMap(int initialCapacity) :Constructs empty  HashMap with specified initial capacity and default load factor (0.75).
+     c.HashMap h = new HashMap(int initialCapacity, float loadFactor) :Constructs empty  HashMap with the specified initial capacity and the specified load factor.
+     d.HashMap h = HashMap(Map  c):Created equivalent HashMap if specified Map
+
+HashMap vs HashTable
+
+HashMap                                  HashTable
+1.methods are non-synchronised          1.methods are synchronised
+2.Multiple threads are allowed          2.Only one thread is allowed to operate at a time
+to operate ,hence not thread              Hence thread safe
+safe
+3.Relatively high performance coz       3.Relatively low performance coz threads are  needed to wait to
+threads are not needed to wait to       operate on Vector Object
+operate on ArrayList Object
+4.Non-legacy(1.2)                       4.legacy(1.0)
+5.null key(once) and values are allowed 5.null key and values are not allowed
+
+Question: How to get synchronised of HashMap
+By default, HashMap is non-synchronised, but we can get synchronised version of HashMap like below
+
+ HashMap a = new HashMap()
+ Map m = Collections.synchronisedList(a)
+
+ Now m is a synchronisedList version of HashMap

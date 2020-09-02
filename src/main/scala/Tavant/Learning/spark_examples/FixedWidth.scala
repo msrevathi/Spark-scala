@@ -28,11 +28,11 @@ object FixedWidth {
     Row.fromSeq(result.reverse)
   }
   def main(args: Array[String]): Unit = {
-    System.setProperty("hadoop.home.dir", "C://winutils//")
-    val spark = SparkSession.builder().master("yarn").config("spark.sql.warehouse.dir", "file:///C://Personalized//").getOrCreate()
-    val rdd = spark.sparkContext.textFile("path of your file")
-    val metadata = spark.read.option("header", "true").csv("path of your Metadata File")
-    val header = metadata.select("col_name").rdd.map(x => x.getString(0).trim()).collect()
+    System.setProperty("hadoop.home.dir", "C://readings//spark")
+    val spark = SparkSession.builder().master("local").getOrCreate() //.config("spark.sql.warehouse.dir", "file:///C://Personalized//").getOrCreate()
+    val rdd = spark.sparkContext.textFile("C://readings//files//input_files//fixedInput.txt")
+    val metadata: DataFrame = spark.read.option("header", "true").csv("C://readings//files//input_files//fixed_metadata")
+    val header: Array[String] = metadata.select("col_name").rdd.map(x => x.getString(0).trim()).collect()
     val sizeOfColumn = metadata.select("size").rdd.map(x => x.getString(0).trim()).collect().map(_.toInt).toList
     val fields = header.map(fieldName => StructField(fieldName, StringType, nullable = true))
     val schema = StructType(fields)

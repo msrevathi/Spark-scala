@@ -1,0 +1,19 @@
+NavigableSet  and NavigableMap
+-------------------------------
+NavigableSet and NavigableMap Introduced in java 1.6 in collection framework
+
+NavigableSet
+------------------------
+ *Collection[I]->Set[I]->SortedSet(I)->NavigableSet(I)->TreeSet(C)
+ 1.Child interface of SortedSet and it defines methods for navigation purpose
+
+ 2.Methods:
+  floor(e):Return highest element <=e
+  lower(e):Return highest element <e
+  higher(e):Return lowest element >e
+  ceiling(e):Return lowest element >=e
+  pollFirst(e):Remove and return the first element
+  pollLast(e):Remove and return the last element
+  descendingSet():Returns navigable set in reverse order
+
+

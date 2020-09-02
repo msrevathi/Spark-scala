@@ -1,0 +1,23 @@
+Vector
+
+1.Underline dataStructure is Resizable-array/ growable array
+2.Duplicates are allowed
+3.Insertion order is preserved
+4.Heterogeneous objects are allowed(except TressSet and TreeMap)
+5.Null insertion is possible
+6.Every collection class implements Serializable and Cloneable interfaces and RandomAccess(any random element can be accessed with same speed)
+7.Methods of Vector is synchronised and hence vector object is thread safe
+8.Constructors
+  a.Vector()-- Vector v1 = new Vector()
+   Constructs an empty vector so that its internal data array has size 10 and its standard capacity increment is zero.
+   once it reaches its max capacity a new vector object is created with new CAPACITY = CURRENT CAPACITY * 2
+ b.Vector(int initialCapacity)-- Vector v1 = new Vector(int initialCapacity)
+   Constructs an empty vector with the specified initial capacity and with its capacity increment equal to zero.
+ c.Vector(int initialCapacity, int capacityIncrement) -- Vector v1 = new Vector(int initialCapacity, int capacityIncrement)
+   Constructs an empty vector with the specified initial capacity and capacity increment.
+ d.Vector(Collection<? extends E> c)-- Vector v1 = new Vector(Collection c)
+   Constructs a vector containing the elements of the specified collection, in the order they are returned by the collection's iterator.
+
+9.Vector specific methods
+
+

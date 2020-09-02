@@ -7,7 +7,7 @@ object DateFunctions {
 
   def main(args: Array[String]): Unit = {
     val spark = SparkSession.builder
-      .master("")
+      .master("local")
       .appName("DateFunctions")
       .getOrCreate()
 
@@ -107,7 +107,7 @@ object DateFunctions {
       */
    // cleanDateDF.select(to_timestamp(col("date"))).show()
 
-    val timeStamp = cleanDateDF.select(to_timestamp(col("date")))//.show(false)
+    val timeStamp = cleanDateDF.select(to_timestamp(col("date"))).show(false)
 
     /**
       * +--------------------+

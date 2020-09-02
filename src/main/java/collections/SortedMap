@@ -1,0 +1,32 @@
+SortedMap
+----------------
+Map(I)->SortedMap(I)->NavigableMap(I)->TreeMap(C)
+1.Child Interface of Map
+2. To represnt (key, value) pairs in some sorted order of keys
+3.Sorting is based on key, not value
+4.Methods
+    1.Object firstKey():Returns the first (lowest) key currently in this map.
+    2.Object lastKey():Returns the last (highest) key currently in this map.
+    3.SortedMap headKey(E toElement):Returns a view of the portion of this map whose keys are strictly less than toKey.()
+    4.SortedMap tailKey(E fromElement):Returns a view of the portion of this map whose keys are greater than or equal to fromKey.
+    5.SortedMap subKey(E fromElement, E toElement):Returns a view of the portion of this map whose keys range from fromKey, inclusive, to toKey, exclusive.
+    6.Comparator comparator():Returns the comparator used to order the keys in this map, or null if this map uses the natural ordering of its keys
+
+Example
+101->A
+102->B
+103->C
+104->D
+105->E
+106->F
+
+firstKey()-> 101
+lastKey()->106
+headKey(105) ->{100=A,102=B,103=C,104=D}
+tailKey(104)->{104=D,105=E,106=F}
+subKey(103,105)->{103=C,104=D}
+Comparator() null
+
+
+
+

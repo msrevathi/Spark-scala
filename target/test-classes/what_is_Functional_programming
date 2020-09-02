@@ -1,0 +1,185 @@
+What is Functional Programming?
+
+https://www.journaldev.com/8693/functional-imperative-object-oriented-programming-comparison
+In simple words, Functional Programming (FP) is one of the popular Programming paradigms, which does computation like Mathematical Functions without Changing State and Mutating Data.
+
+In Functional Programming, Functions are first class candidates. We write programs by defining a set of Functions and Immutable Data
+
+Examples of FP Languages:-
+Scala, Haskell, Earlang etc are popular FP Languages. Java SE 8 also have some Functional Constructs (Please refer Java 8 posts for more details)
+
+What are the Characteristics of FP?
+Functional Programming Languages like Scala have the following Characteristics
+
+State does not exist.
+FP Programs does not contain state. That means all Data is Immutable Data and Functions cannot change state.
+
+Low importance of Order of Execution
+In FP Languages, we write programs with a set of Independent Functions. Functions contain a set of statements.
+In FP, the order of execution of those Functions does not have much importance because they do not have state and all Functions work independently. Even if we change the order of execution still they produce the same results.
+
+Stateless Programming Model
+All FP Programs uses Immutable data and Functions, which cannot modify that data. That means FP Languages support Stateless Programming Model.
+
+Functions are first class citizens
+In FP Languages, Functions are first class objects. Functions are independent units, we can execute them in any order.
+
+Primary Manipulations Units
+In FP Languages, Primary Manipulations units are Functions and Data Structures because All Programs are made up of using these units.
+
+Modular Programming
+In FP Languages, we need to write smaller and independent units, called Pure Functions to support Stateless Programming model. That means FP supports better Modularity than OOP.
+
+Higher-order Functions and Lazy Evaluation
+Functional Programming Languages should support Higher-order functions and Lazy Evaluation features.
+
+Primary Flow Controls
+FP Languages don’t use Flow Controls like For…Loop, Do…While Loop, While…Loop etc and also don’t use Conditional statements like If..Else or Switch Statements. All FP Languages write programs using the following things:
+
+Functions
+Function calls
+Function calls with Recursion
+Abstraction,Encaspulation,Inheritance and Polymorphism
+Like OOP, FP Languages supports all 4 concepts : Abstraction,Encaspulation,Inheritance and Polymorphism. FP Languages supports Inheritance with Type Classes or Implicits. They support Polymorphism with the help of Generics. It is also known as Parametric Polymorphism.
+
+What is the main Focus of FP?
+Unlike OOP Languages, All FP Language Programs mainly focus on “What you are doing” or “What is to be done”.
+They mainly focus on the following things:
+
+What Information is desired that is Inputs.
+What Transformations are required that is Actual Logic.
+That means FP is mainly focused on “What is to be done”. It does not much focus on “How is it to be done”. That’s we can write Functional Programming just like Problem Domain description. That’s why, not only Developers but also other people can understand FP code very easily.
+
+Now we will discuss about the “Pros & Cons” (Advantages and Disadvantages) of Functional Programming.
+
+Advantages of Functional Programming?
+Functional Programming Languages have the following Advantages or Benefits or Pros:
+
+Bugs-Free Code
+As FP Languages do not support state, they don’t raise any side-effects that means we can write Error-free code or Bugs-free code or Less Error-prone Code.
+
+Efficient Parallel Programming
+As FP Languages have NO Mutable state, they don’t raise any state-change issues. That means they use only Immutable Data. They use Independent Units to write programs that is “Functions”. We can write very efficient Parallel or Concurrent Programming because they run independently without changing state.
+
+Better Performance
+As FP Programs compose with all Independent units, They can run Parallel or Concurrently. Because of this reason, FP Applications gain better performance.
+
+Better Encaspulation
+Unlike OOP, FP supports better Encaspulation with Pure Functions. Pure functions means without side-effects.
+
+Supports Nested Functions
+Nested Functions means composing functions with-in other functions to solve problems. FP supports Nested Functions.
+
+Increase Reusability
+As FP programs are made up of Independent Units that is “Functions”, we can reuse them very easily.
+
+Better Modularity
+In FP Languages, we need to write smaller and independent units, called Pure Functions to support Stateless Programming model. That means FP supports better Modularity than OOP.
+
+Easy Lazy Evaluation
+In FP Languages, it is very easy to write Lazy Evaluation. They support Lazy Functional Constructs like Lazy Lists, Lazy Maps etc.
+
+Increase Readability and Maintainability
+Functional Programming (FP) also improves Readability and Maintainability because they work Independently and they don’t change state.
+
+Increase Testability
+As we write our FP programs using Independent Units that is “Functions”, we can unit test them very easily.
+
+Supports Abstraction over Behavior
+Unlike OOP, FP supports both “Abstraction over Data” and “Abstraction over Behavior”. Because Real-world contains both.
+
+Support for BigData
+As FP supports Parallel programming and better performance, FP is very good for developing BigData Applications.
+
+Robust and Reliable Code
+As FP uses Immutable Data, we can easily develop Robust and Reliable Code using FP.
+
+Drawbacks of Functional Programming?
+Aside from great Benefits, Functional Programming Languages also have very Few or Minimal or Ignorable Drawbacks.
+They have only the following Cons:
+
+Requires Lot of Memory
+FP don’t have state. They always creates new Objects to perform actions instead of modifying existing objects. Because of this, FP Applications takes lot of memory.
+
+Does NOT concentrate on Liskov Substitution
+What are the major concepts of Functional Programming?
+The following concepts are major and important concepts of Functional Programming.
+
+First-Class Functions.
+Lazy Evaluation.
+Higher-Order Functions.
+Immutability(Non-Mutable Data).
+Modularity.
+No Side-effects.
+Lazy Evaluation.
+Recursive Function-Calls
+
+What is Imperative Programming?
+Imperative Programming (IP) is one of the popular Programming Paradigms which executes a sequence of steps/instructions/statements in some order.
+
+Examples of IP Languages:- Java, C, C++ etc
+
+Main Characteristics of Imperative Programming?
+Any Imperative Programming (IP) Languages can contain the following Characteristics:
+
+Sequence of Statements.
+Order of execution of Statements is very important.
+They contain state.
+They use both Immutable and Mutable Data.
+They can change state.
+They may have Side-effects.
+Stateful Programming Model.
+They directly change the state of Program.
+They represent state with Data Fields.
+What is Object Oriented Programming?
+Object Oriented Programming is another kind of Programming Paradigm. It represents everything as an Object. Each Object contains Some Data Fields and Methods.
+All OOP Programs contains State. They use Mutable Data and Data Structures. Like FP, We can write complete programmings by using Immutable Data, but it does not enforce this rule.
+
+Object Oriented Programming (OOP) is a super set of Imperative Programming. It follows all characteristics of IP with some extra features.
+
+Those extra features are:
+
+Everything is an Object.
+Each Object contains Some Data Fields and Methods.
+OOPs Concepts: Abstraction,Encaspulation,Inheritance and Polymorphism
+Unlike Functional Programming Languages, OOP Languages are mainly focused on “How is it to be done”. That means As a Developer, we focus on “How you are doing”.
+
+Moreover, OOP combines both “What you are doing” and “How you are doing”. That’s why we cannot write concise and more readable code. Only Developers can understand the code, Other people can get more confusion to understand the application code, they cannot understand it.
+
+Drawbacks of Object Oriented Programming(OOP)?
+Even though OOP solves many real-time problems, still have the following drawbacks(When Compared to FP):
+
+It does not support full Reusability.
+It is not fully Modularity.
+It breaks Encaspulation concept.
+Inheritance has lot of drawbacks.
+Major Drawbacks of Inheritance:
+Breaks Encapsulation principle
+When Inheritance levels increases, it is very tough and hard to maintain and create objects.
+When to use Functional Programming?
+We should go for Functional Programming (FP) in the following scenarios:
+
+When we are going to be performing lots of different operations on the data that has fixed.
+In other words, when we have few things with more operations.
+When to use Object Oriented Programming?
+We should go for Object Oriented Programming (OOP) in the following scenarios:
+
+When we are going to be performing few operations on lots of different variants which have common behavior.
+In other words, when we have more things with few operations.
+NOTE:-
+Here Things are Real-world objects and operations are Real-world Actions. For example, In Java we represent these Real-world Things as “Classes” and Real-world Actions as Methods(Operations).
+
+Differences between FP and OOP(IP)?
+Functional Programming	 / OOP
+Does not exist State	/ Exists State
+Uses Immutable data	Uses Mutable data / It follows Declarative Programming Model	It follows Imperative Programming Model
+Stateless Programming Model	Stateful Programming Model / Main Fcous on: “What you are doing”	Main focus on “How you are doing”
+Good for Parallel (Concurrency) Programming	Poor for Parallel (Concurrency) Programming / Good for BigData processing and analysis	NOT Good for BigData processing and analysis
+Supports pure Encaspulation	It breaks Encaspulation concept / Functions with No-Side Effects	Methods with Side Effects
+Functions are first-class citizens	Objects are first-class citizens / Primary Manipulation Unit is “Function”	Primary Manipulation Unit is Objects(Instances of Classes)
+Flow Controls: Function calls, Function Calls with Recursion	Flow Controls: Loops, Conditional Statements / It uses “Recursion” concept to iterate Collection Data.	It uses “Loop” concept to iterate Collection Data. For example:-For-each loop in Java
+Order of execution is less importance.	Order of execution is must and very important.
+Supports both “Abstraction over Data” and “Abstraction over Behavior”.	Supports only “Abstraction over Data”. / We use FP when we have few Things with more operations.	We use OOP when we have few Operations with more Things. For example: Things are classes and Operations are Methods in Java.
+That’s it all about three popular Programming Paradigms.
+
+NOTE:- I’m basically from OOP, but started working on FP just a year ago. So if Functional Programming Experts finds any mistakes in this post, please provide me your valuable inputs.

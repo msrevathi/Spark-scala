@@ -32,7 +32,7 @@ object sparkDataFrameApi {
       .option("delimiter","~")
       .option("timestampFormat", "yyyy/mm/dd HH:mm:ss")
       .schema(itPostsRowsSchema)
-      .load("D:\\files\\italianpost.csv")
+      .load("C:\\readings\\files\\input_files")
 
 //    itPostsDF.show(false)
 //    itPostsDF.printSchema()
@@ -82,7 +82,7 @@ object sparkDataFrameApi {
       */
 
     // creating RDD  using SparkSession
-    val itPostsRDD: RDD[String] = spark.sparkContext.textFile("D:\\files\\italianpost.csv")
+    val itPostsRDD: RDD[String] = spark.sparkContext.textFile("C:\\readings\\files\\input_files")
     val itPostsRDD_split = itPostsRDD.map(x => x.split("~"))
     import spark.implicits._
     val itPostCols = itPostsRDD_split.map(x => (x(0),x(1),x(2),x(3),x(4),x(5),x(6),x(7),x(8),x(9),x(10),x(11),x(12)))

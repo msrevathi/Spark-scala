@@ -1,0 +1,12 @@
+Exception:Unwanted/unexpected event that disturbs our normal flow of program
+Purpose of Exception Handling: graceful termination of program
+Meaning of Exception: Defining alternate way to continue rest of the program normally
+
+1.Runtime Stack Mechanism
+for every thread jvm will create a runtime stack.Each method call performed by that thread is stored in stack.
+Each entry in stack is called "stack frame"/"activation record".
+After completing method call, corresponding entry from stack is removed.After completing all the method calls,
+the corresponding stack will become empty and that empty stack is destroyed by jvm , just before
+terminating the thread
+
+

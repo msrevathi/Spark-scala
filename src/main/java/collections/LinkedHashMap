@@ -1,0 +1,24 @@
+LinkedHashMap
+---------------------------
+LinkedHashMap
+--------------
+*MAP(I)->HashMap(C)->LinkedHashMap(C)
+1.child interface of HashMap[I]
+2.Undeline dataStructure is HashTable and LinkedList
+3.same methods and constructrs as of  HashMap
+4.Insertion order is preserved
+5. is not synchronized.
+ to get synchronized object ->  Map s = Collections.synchronizedSet(new LinkedHashMap(...));
+NOTE: we cau use LinkedHashSet to develop cache based applications,
+       where duplicates are not allowed and insertion order is preserved.
+
+HashMap                                                 LinkedHashMap
+1.datastructure -HashTable                              1.datastructure -HashTable and LinkedList
+2.Insertion order is not preserved                      2.Insertion order is preserved
+  and isertion order is based on hashcode
+  of keys
+3.java 1.2                                                   3. java 1.4
+
+NOTE: we cau use LinkedHashSet and LinkedHashMap to develop cache based applications,
+       where duplicates are not allowed and insertion order is preserved.
+

@@ -1,0 +1,19 @@
+List [I]
+https://docs.oracle.com/javase/8/docs/api/java/util/List.html
+==========
+Collection[I]->List[I]->LinkedList(C)
+                      ->ArrayList(C)
+                      ->Vector(C) -> Stack(C)
+1.child interface of collection
+2.To represent group of objects as single entity where duplicates are allowed and insertion is  preserved
+3.Insertion order is maintained using index, also duplicates objects are identified using index
+
+some Specific methods in List:
+1.void add(int index, E element): Inserts the specified element at the specified position in this list (optional operation).
+2.boolean addAll(int index, Collection<? extends E> c):Inserts all of the elements in the specified collection into this list at the specified position (optional operation).
+3.Object get(int index):Returns the element at the specified position in this list
+4.boolean remove(int index):Removes the element at the specified position in this list (optional operation).
+5.Object set(int index, E element):Replaces the element at the specified position in this list with the specified element (optional operation).
+6.int	lastIndexOf(Object o): Returns the index of the last occurrence of the specified element in this list, or -1 if this list does not contain the element.
+7.int	indexOf(Object o):Returns the index of the first occurrence of the specified element in this list, or -1 if this list does not contain the element
+8.ListIterator	listIterator():Returns a list iterator over the elements in this list (in proper sequence).

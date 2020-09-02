@@ -1,0 +1,26 @@
+Properties
+------------------
+java.util package
+1.The Properties class represents a persistent set of properties.
+2.In our program if anythings which changes frequently like userName ,password,mobile are not recommended to hardcode in Java.
+  coz i there is any change in those,to reflect thta change, recompilation, rebuild and re deploy of application required.
+  also server restart sometimes which in trun impacts business client
+3.We can overcome this issue using Properties file.Such type of variable things we have to configure in Properties file.
+  From Properties file , read into java program and use those Properties.
+  Main adv of this approach is if there is a change in Properties file, to reflect that change, just re-deployment
+  is enough , which will not create business impact to client.
+4.We can use java Properties object to hold Properties from Properties file
+5.In normal map like hashmap, hashtable, treemap key and value can be any type, but in Properties, key and values should be
+  String type
+6.Constructors
+Properties p = new Properties()
+7.Methods
+ 1.String setProperty  (String Properties_name, String Properties_value):to set a new Properties
+   if the specifies Properties is already there, then old value is replaced with new value
+    and return old value
+ 2.String getProperty  (String Properties_name):to get value of the specified property
+Note: i specified property is not there then it return null
+ 3.Enumeration PropertyNames():returns all property names present in property object
+ 4.load(InputStream inStream):to load properties from properties file into java properties object
+ 5.store(OutputStream out, String comments):to store java properties object into properties file
+

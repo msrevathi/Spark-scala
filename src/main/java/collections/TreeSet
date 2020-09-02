@@ -1,0 +1,55 @@
+TreeSet
+-----------
+1.Undeline dataStructure is BalancedTree
+2.insertion order is not preserved
+3.Heterogeneous elements not allowed, gets classCastException if we try to do so
+4.null(once) insertion is allowed
+5.Implements Clonable(I) and Serializable(I) , but not RandomAccess(I)
+6.Elements may be sorted using default /customised sorting order
+7.Constructors
+   1.TreeSet t = new treeSet(); - Constructs a new, empty tree set, sorted according to the natural ordering of its elements.
+   2.TreeSet t = treeSet(Comparator  c); -Constructs a new, empty tree set, sorted according to the specified comparator.
+   3.TreeSet(Collection  c); -Constructs a new tree set containing the elements in the specified collection, sorted according to the natural ordering of its elements.
+   4.TreeSet t = treeSet(SortedSet s); Constructs a new tree set containing the same elements and using the same ordering as the specified sorted set.
+8.null acceptance rules
+  1. For non empty TreeSet if we try to insert, then we get NullPointerException
+  2.For empty treeSet, null as first element is allowed,but afte null i we try to insert any element, then we get Runtim
+    exception NullPointer exception
+NOTE: Till java 1.6 null is allowed as first element to empty TreeSet, but orm 1.7, null is not allowed even as first element
+
+9.If we depend on default sorting order, the objects should be Homogeneous and Comparable
+  otherwise we Runtime exception - ClassCastException
+Note: An object is said to be Comparable if it implements Comparable[I]
+      String class and all wrapper class implements Comparable[I], but
+      StringBuffer doesn't implements Comparable[I], hence we get
+      ClassCastException in the example
+10.If we depend on default sorting order, while adding objects to TreeSet , jvm will call compareTO()
+  example:
+  obj1.compareTo(obj2);
+  -obj1 -object to be inserted
+  -obj2 -object which is  inserted already
+     e.g obj1.compareTo(obj2);
+    returns -ve  if obj1 has to come before obj2
+    returns +ve  if obj1 has to come after obj2
+    returns 0  if obj1 is equal to  obj2
+
+  TreeSet t = new TreeSet();
+  t.add("K");
+  t.add("z");
+  t.add("A");
+  t.add("A");
+
+Explanation:
+t.add("K") --k is inserted first                    =>  K
+t.add("z") --"Z".compareTo("K") // +ve              => K -> Z
+t.add("A") --"A".compareTo("K") // -ve              => A -> K -> Z
+t.add("A") -- "
+  1.A".compareTo("K") // -ve                        => A -> K -> Z
+  2.A.compareTo("A")//0
+ --element to be inserted is compared with key element
+ --the to other elements
+
+
+
+
+

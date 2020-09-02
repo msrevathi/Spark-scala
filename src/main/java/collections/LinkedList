@@ -1,0 +1,64 @@
+LinkedList(C)
+1.Underline dataStructure is Doubly-linked list
+2.Duplicates are allowed
+3.Insertion order is preserved
+4.Heterogeneous objects are allowed(except TressSet and TreeMap)
+5.Null insertion is possible
+6.Every collection class implements Serializable and Cloneable interfaces
+7.LinkedList does not implements RandomAccess
+8.
+Best for
+1.if frequent operation is insertion or deletion in the middle
+
+Worst for
+1.if frequent operation is retrival operation
+
+9.Constructors
+   no concept of capacity
+   a.LinkedList():an empty list.
+       -- LinkedList l = new LinkedList()
+   b.LinkedList(Collection<? extends E> c) :Constructs a list containing the elements of the specified collection
+       -- LinkedList l = new LinkedList(Collection c)
+
+
+10.LinkedList Specific methods
+  -we can use LinkedList to develop stacks and Queues
+  -To provide support for this requirement, LinkedList defines below methods
+   1. void addFirst(Object o): Inserts the specified element at the beginning of this list.
+   2. void addLast(Object o): Appends the specified element to the end of this list
+   3. Object getFirst(): Returns the first element in this list.
+   4. Object getLast(): Returns the last  element in this list.
+   5. Object removeFirst() : Removes and returns the first element from this list
+   6. Object removeLast() : Removes and returns the last element from this list.
+
+NOTE:
+DIFF btw ArrayList and LinkedList
+
+ArrayList                                                LinkedList
+1.Best if frequent operation is retrival operation,      1.Best  if frequent operation is insertion or deletion in the middle
+coz it implements RandomAccess(I)
+2.Worst if frequent operation is insertion or            2.worst if frequent operation is retrival operation
+deletion in the middle, because internally
+several shift operations are performed
+3.Elements are stored in consecutive memory locations    3.Elements are not stored in consecutive memory locations
+ hence retrival operation is easy                          hence retrival operation is difficult
+
+ArrayList:
+Best for
+1.if frequent operation is retrival operation, coz it implements RandomAccess(I)
+2. Elements are stored in consecutive memory locations , hence retrival operation is easy
+Worst for
+1.if frequent operation is insertion or deletion in the middle
+    e.g
+    ArrayList l = new ArrayList(1000)
+    if we wan to add any element in between, ArrayList will create a new insert the new element in
+    between ,but will have to shift the elements after that.
+    Hence it is not good for frequent insertion/deletion operations
+
+LinkedList
+Best for
+1.if frequent operation is insertion or deletion in the middle
+
+Worst for
+1.if frequent operation is retrival operation
+2. Elements are not stored in consecutive memory locations , hence retrival operation is difficult

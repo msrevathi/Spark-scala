@@ -1,0 +1,24 @@
+TreeMap[I]
+----------------
+Map(I)->SortedMap(I)->NavigableMap(I)->TreeMap(C)
+1.DataStructure is RED BLACK tree
+2.Insertion order is not preserved and is based on some sorting order of keys
+3.Duplicate keys not allowed,but values can  be duplicated
+4.If we want default natural sorting order, then keys should be homogeneous and comparable otherwise RuntimeException ClassCastException
+5.If we define our own Comparator, then keys need not be homogeneous and comparable.,we can take heterogeneous non-comparable objects also.
+6.For values we can anyhow consider any values either homogeneous or heterogeneous.
+7.null acceptance rules
+  1. For non empty TreeMap if we try to insert, then we get NullPointerException
+  2.For empty TreeMap, null as first entry is allowed,but after null if we try to insert any entry, then we get Runtim
+    exception NullPointer exception
+NOTE: Till java 1.6 null is allowed as first element to empty TreeMap, but orm 1.7, null is not allowed even as first element for key
+  3.null is allowed multiple times for values
+  
+8.Constructors
+     1.TreeMap t = new TreeMap(); - Constructs a new, empty tree map, sorted according to the natural ordering of keys.
+     2.TreeMap t = TreeMap(Comparator  c); -Constructs a new, empty tree map, sorted according to the specified comparator.
+     3.TreeMap(Map  m); -Constructs a new tree map containing the elements in the specified collection, sorted according to the natural ordering of its elements.
+     4.TreeMap t = TreeMap(SortedMap s); Constructs a new tree set containing the same elements and using the same ordering as the specified sorted set.
+  
+
+

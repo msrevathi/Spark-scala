@@ -1,0 +1,17 @@
+PriorityQueue
+-----------------------
+QUEUE(I)->PriorityQueue
+To represent group of objects prior to processing, according to some priority then go for PriorityQueue
+priority can be default or customised sorting order defined by customer
+1.Child interface of Queue
+2.Insertion order is not preserved and is based on some priority
+3.Duplicates not allowed
+4.If we want default sorting order, objects should be Homogeneous and comparable else RuntimeException ClassCastExcetion
+5.If define our own sorting order using comaparable then objects need not to be  Homogeneous and comparable
+6.null not allowed even as 1st element
+7.Methods
+  1.PriorityQueue q = new PriorityQueue():Creates a PriorityQueue with the default initial capacity (11) that orders its elements according to their natural ordering.
+  2.PriorityQueue q= PriorityQueue(int initialCapacity) :Creates a PriorityQueue with the specified initial capacity that orders its elements according to their natural ordering
+  3.PriorityQueue(int initialCapacity, Comparator c):  Creates a PriorityQueue with the specified initial capacity that orders its elements according to the specified comparator.
+  4.PriorityQueue(SortedSet c) :Creates a PriorityQueue containing the elements in the specified sorted set.
+  5.PriorityQueue(Collection c): Creates a PriorityQueue containing the elements in the specified collection.

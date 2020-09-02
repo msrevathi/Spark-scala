@@ -1,0 +1,44 @@
+Comparable[I]
+-------------------
+1.present in java.lang package
+2.one method - compareTo
+3.for default sorting order
+ Public int compareTo(Object obj)
+   e.g obj1.compareTo(obj2);
+  returns -ve  if obj1 has to come before obj2
+  returns +ve  if obj1 has to come after obj2
+  returns 0  if obj1 is equal to  obj2
+
+NOTE: if default sorting order is not required and we need customised sorting order, go for Comparator[I]
+Comparable[I]-default sorting order
+Comparator[I]-customised sorting order
+
+Comparator[I]
+------------------
+1.present in java.util package
+2.two methods - compare() and equals
+--  Public int compare(Object obj1,Object obj2)
+     returns -ve  if obj1 > obj2 (obj1 has to come before obj2)
+     returns +ve  if obj1 < obj2 (obj1 has to come after obj2)
+     returns 0  if obj1 is equal to  obj2
+
+--Public boolean equals(Object obj)
+Note: While we implement Comparato[I] we should provide implementation only for  compare() and not required to implement equals
+      coz , its is already available to our class from Object class through Inhertance
+
+NOTE:
+Comparable vs Comparator
+1.For predefined Comparable class default sorting order is already available, if we not need the default sorting order we can
+  define our own sorting order by using comparator
+2.For predefined non Comparable class(StringBuffer ) default sorting order is not available, hence we can
+    define our own sorting order by using comparator
+3.For our own classes like  Employee, person who is writing that class is responsible to define default natural sorting order by implementing comparable[I]
+4.Person who is not satisfied with default natural sorting order, then he can define his own sorting by using Comparator[I]
+
+Comparable                                                     Comparator
+1.default sorting order                                      1.customised sorting order
+2.java.lang                                                  2.java.util
+3.compareTo                                                  3.compare() and equals() methods
+4.String and all wrapper classed implements                  4.Only implemented classes of Comparator[I] are Collator and RuleBasedCollator
+Comparable[I]
+

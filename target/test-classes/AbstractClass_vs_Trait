@@ -1,0 +1,7 @@
+A class can inherit from multiple traits but only one abstract class.
+Abstract classes can have constructor parameters as well as type parameters. Traits can have only type parameters. For example, you can’t say trait t(i: Int) {}; the i parameter is illegal.
+Abstract classes are fully interoperable with Java. You can call them from Java code without any wrappers. Traits are fully interoperable only if they do not contain any implementation code.
+Traits support multiple inheritance. Abstract class does not support multiple inheritance
+We are allowed to add a trait to an object instance. We are not allowed to add an abstract class to an object instance.
+Traits does not contain constructor parameters. Abstract class contain constructor parameters.
+Use abstract class when the code will be called from Java code. (https://alvinalexander.com/scala/when-to-use-abstract-class-trait-in-scala/)

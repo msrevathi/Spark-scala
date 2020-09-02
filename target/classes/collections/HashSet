@@ -1,0 +1,22 @@
+HashSet
+--------------
+Collection[I]->Set[I]->HashSet(C)
+1.child interface of Set[I]
+4.Undeline dataStructure is HashTable
+2.To represent group of objects as single entity where duplicates are not allowed and insertion is not preserved
+3.Constructors
+   a.HashSet h = new HashSet(); : Constructs a new, empty set; the backing HashMap instance
+       has default initial capacity (16) and load factor (0.75).
+   b.HashSet h = HashSet(int initialCapacity)
+      :Constructs a new, empty set; the backing HashMap instance has the specified initial
+        capacity and default load factor (0.75).
+   c.HashSet h = HashSet(int initialCapacity, float loadFactor)
+      :Constructs a new, empty set; the backing HashMap instance has
+        the specified initial capacity and the specified load factor.
+   d.HashSet h = HashSet(Collection  c)
+     :Constructs a new set containing the elements in the specified collection.
+4.is not synchronized.
+ to get synchronized object ->   Set s = Collections.synchronizedSet(new HashSet(...));
+NOTE:
+loadFactor/Fill ratio - the load factor of the hash map; after filling how much ratio a new HasSet object is created
+e.g loadFactor/Fill ratio = .075 -> after filling 75% of HashSet, a new HashSet is created

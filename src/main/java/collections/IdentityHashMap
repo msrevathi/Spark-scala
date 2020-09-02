@@ -1,0 +1,15 @@
+IdentityHashMap
+----------------
+== vs equals()
+1.== for reference(address) comparision
+2.equals() for content comparision
+ e.g
+ Integer i1 = new Integer(10);
+ Integer i2 = new Integer(10);
+ Sopln(i1==i2) -> false
+ Sopln(i1.equals(i2)) -> true
+
+IdentityHashMap
+1.Same as  HashMap (methods and constructors) except below
+ - HashMap uses "equals()" to identify duplicate keys (content comparasion)
+   But IdentityHashMap uses "==" to identify duplicate keys (reference(address) comparasion)

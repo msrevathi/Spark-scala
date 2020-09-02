@@ -1,0 +1,13 @@
+Stack(C)
+1.Child class of vector
+2.Specially designed class foe LIFO
+3.Insertion order is maintained , but while removing LIFO is followed
+7.null insertion is allowed
+4.Constructors
+  a. Stack s = new Stack
+5.Methods
+ a.push : to add object
+ b.pop: Removes the object at the top of this stack and returns that object as the value of this function
+ c.peek(): returns the object at the top of this stack without removing it from the stack.
+ d.empty():  Tests if this stack is empty.(true if stack is empty)
+ e.int search(Object o):   Returns offset if element is available otherwise -1

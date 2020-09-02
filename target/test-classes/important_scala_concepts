@@ -1,0 +1,22 @@
+SINGLETON OBJECTS IN SCALA
+=================================================================================
+Singleton object is an object which is declared by using object keyword instead by class.
+No object is required to call methods declared inside singleton object.
+
+There is no static keyword in Scala, instead we have singleton objects.
+All we need is to use object keyword to create a singleton object.
+We can call it’s methods directly, we can’t pass parameters to its primary constructor.
+Below is a quick example of singleton objects in Scala.
+=================================================================================
+HOW TO CREATE STATIC MEMBERS WITH SCALA COMPANION OBJECTS
+=================================================================================
+Define non-static (instance) members in your class, and define members that you want to appear as
+“static” members in an object that has the same name as the class, and is in the same file as the
+class. This object is known as a companion object.
+================================================================================
+Companion objects
+An object with the same name as a class is called a companion object. Conversely,
+the class is the object’s companion class. A companion class or object can access the
+private members of its companion. Use a companion object for methods and values which are not
+specific to instances of the companion class.
+

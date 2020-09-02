@@ -1,0 +1,11 @@
+LinkedHashSet
+--------------
+Collection[I]->Set[I]->HashSet(C)->LinkedHashSet(C)
+1.child interface of HashSet[I]
+2.Undeline dataStructure is HashTable and LinkedList
+3.same methods and constructrs as of  HashSet
+4.Insertion order is preserved
+5. is not synchronized.
+ to get synchronized object ->  Set s = Collections.synchronizedSet(new LinkedHashSet(...));
+NOTE: we cau use LinkedHashSet to develop cache based applications,
+       where duplicates are not allowed and insertion order is preserved.

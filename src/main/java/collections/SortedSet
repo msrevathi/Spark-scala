@@ -1,0 +1,16 @@
+SortedSet
+------------------
+Collection[I]->Set[I]->SortedSet(I)
+1.child interface of Set[I]
+2.To represent group of individual objects according to some sorting order
+3.same methods and constructrs as of  HashSet
+4.Insertion order is preserved
+5.Methods
+    1.Object first():Returns the first (lowest) element currently in this set.
+    2.Object last():Returns the last (highest) element currently in this set.
+    3.SortedSet headSet(E toElement):Returns a view of the portion of this set whose elements are strictly less than toElement.
+    4.SortedSet tailSet(E fromElement):Returns a view of the portion of this set whose elements are greater than or equal to fromElement.
+    5.SortedSet subSet(E fromElement, E toElement):Returns a view of the portion of this set whose elements range from fromElement, inclusive, to toElement, exclusive.
+    6.Comparator comparator():Returns the comparator used to order the elements in this set, or null if this set uses the natural ordering of its elements.
+
+6.Default sorting order for numbers-ascending, alphabetical -string

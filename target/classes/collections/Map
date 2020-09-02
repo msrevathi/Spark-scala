@@ -1,0 +1,57 @@
+Map[I]
+---------------
+ *MAP(I)->HashMap(C)->LinkedHashMap(C)
+ *MAP(I)->WeakHashMap
+ *MAP(I)->IdentityHashMap
+ *MAP(I)->Dictonary(A.C)->Hashtable->Properties
+ *Map(I)->SortedMap(I)->NavigableMap(I)->TreeMap(C)
+ *MAP(I)->Dictonary(A.C)->Hashtable->Properties
+
+ 1.Not a child interface of collection
+ 2.To represent group o objects as key value pairs,
+
+ key   value
+ 101    Ram
+ 102    Raj
+ 103    Shyam
+ 104    Gita
+
+3.Both keys and values are objects
+4.Duplicate key not allowed, but duplicate values are allowed
+5.each (key, value) pairs is called entry- Hence Map is called collection o entries
+6.Methods
+ 1.Object put(Object key, V Object) : To add one (key, value )to Map
+                       :If key is already present in Map, old value is replaced by new value and returns old value
+                        e.g:  m.put(101,"Ram");  --> returns null
+                              m.put(102,"Raj");  --> returns null
+                              m.put(101,"Lax");  --> returns Ram (old value)
+ 2.void putAll(Map m) :To add group (key, value )to Map
+ 3.Object get(Object key):returns the value of the key specified
+ 4.Object remove(Object key):removes the entry of the specified key
+ 5.boolean containsKey(Object key):
+ 6.boolean containsValue(Object key):
+ 7.boolean isEmpty(): true if map is empty
+ 8.int size():size of map
+ 9.void clear:all (key, value) pairs removed
+ //collection views of maps
+ 10.Set keySet() : Returns a Set view of the keys contained in this map.
+ 11.Collection: values() : Returns a Collection view of the values contained in this map
+ 12.Set	entrySet() : Returns entrySet
+ 13.Entry: Map is a collection of group of (key, value) pairs is called entry- Hence Map is called collection of entry objects
+   Without Mpa objects, there is no Entry object, Hence Entry[I] is defined inside Map[I]
+   e.g.
+      Interaface Map{
+
+      Interaface Entry{
+        //Entry speciic methods and can be applied only on entry objects
+        Object getKey();
+        Object getValue();
+        Object setValue();
+      }
+      }
+
+
+
+
+
+

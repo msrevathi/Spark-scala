@@ -1,0 +1,28 @@
+Set
+----------
+ *Collection[I]->Set[I]->HashSet(C)->LinkedHashSet(C)
+ *Collection[I]->Set[I]->SortedSet(I)->NavigableSet(I)->TreeSet(C)
+1.child interface of collection
+2.Underline dataStructure is Hashtable
+3 duplicates are not allowed and insertion is not preserved
+4.No new methods, should use collection methods
+5.null(once) insertion is allowed
+6.Heterogeneous elements allowed
+7.Implements Clonable(I) and Serializable(I) , but not RandomAccess(I)
+8.Best if frequent operation is search
+
+Note:
+Duplicates are not allowed, if we try to insert Duplicates, there is no Compile/runtime error, But add() return false
+HashSet h = new HashSet();
+Sop(h.add("A")); //true
+Sop(h.add("A"));// false
+
+Comparation HashSet,LinkedHashSet,TreeSet
+
+Property                   HashSet                 LinkedHashSet                     TreeSet
+1.dataStructure            Hashtable               Hashtable+LinkedList              BalancedTree
+2.Duplicates               Not allowed             Not allowed                       Not allowed
+3.Insertion order          Not preserved           preserved                         Not preserved
+4.Sorting order            NA                      NA                                Yes
+5.Heterogeneous objects    allowed                 allowed                           Not allowed
+6.null acceptance          allowed                 allowed                           allowed for empty TreeSet as a first element until java 1.6, but from java 1.7 null not allowed at all
